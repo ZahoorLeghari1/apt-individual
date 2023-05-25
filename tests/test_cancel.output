@@ -1,0 +1,146 @@
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+Select your option (1-9): 1
+Items Menu
+----------
+ID   | Name                         | Available| Price
+-----|------------------------------|----------|------
+I0002|Apple Pie                     |20        |$3.00
+I0003|Lemon Cheesecake              |10        |$4.00
+I0004|Lemon Meringue Pie            |20        |$3.00
+I0005|Lemon Tart                    |12        |$3.75
+I0001|Meat Pie                      |50        |$3.50
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+Select your option (1-9): 2
+Purchase Item
+-------------
+Please enter the id of the item you wish to purchase: I003
+Please select a valid ID
+Please enter the id of the item you wish to purchase: I0003
+You have selected "Lemon Cheesecake - A delicious, 1/8 size slice of cheesecake". This will cost you $ 4.00.
+Please hand over the money - type in the value of each note/coin in cents.
+Press enter or ctrl-d on a new line to cancel this purchase:
+You still need to give us $3.50: 100
+You still need to give us $1.50: 300
+Error: $3.00 is not a valid denomination of money. Please try again.
+You still need to give us $1.50: 
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+Select your option (1-9): 4
+Add Item
+--------
+The id of the new stock will be: I0006
+Enter the item name: 
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+Select your option (1-9): 4
+Add Item
+--------
+The id of the new stock will be: I0006
+Enter the item name: Pie
+Enter the item description: 
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+Select your option (1-9): 1
+Items Menu
+----------
+ID   | Name                         | Available| Price
+-----|------------------------------|----------|------
+I0002|Apple Pie                     |20        |$3.00
+I0003|Lemon Cheesecake              |10        |$4.00
+I0004|Lemon Meringue Pie            |20        |$3.00
+I0005|Lemon Tart                    |12        |$3.75
+I0001|Meat Pie                      |50        |$3.50
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+Select your option (1-9): 6
+Display Coins
+-------------
+Coins Summary
+-------------------------------
+Denomination |           Count
+--------------------------------
+5            |              20
+10           |              40
+20           |               3
+50           |               5
+100          |              30
+200          |              20
+500          |               4
+1000         |               3
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+Select your option (1-9): 3
+Save and Exit
+-------------
+
