@@ -389,22 +389,23 @@ void saveAndQuit_coins(const std::vector<Coin> &coins)
 
 
 // Reset Stock Count
-void resetStockConut(LinkedList &list1, LinkedList &list2)
+void resetStockConut(LinkedList& list1, LinkedList& list2)
 {
     for (LinkedList::Iterator it1 = list1.begin(); it1 != list1.end(); ++it1)
     {
-        Stock &stock1 = it1.operator*();
+        Stock& stock1 = it1.operator*();
         bool found = false;
-        for (LinkedList::Iterator it2 = list2.begin(); it2 != list2.end(); ++it2)
+        LinkedList::Iterator it2 = list2.begin();
+        while (!found && it2 != list2.end())
         {
-            Stock &stock2 = it2.operator*();
+            Stock& stock2 = it2.operator*();
             if (stock1.name == stock2.name)
             {
                 stock1.on_hand = stock2.on_hand;
                 found = true;
-                break;
             }
             std::cout << "All stock have been reset to the default level of " << stock2.on_hand << std::endl;
+            ++it2;
         }
         if (!found)
         {
@@ -594,7 +595,7 @@ void purchaseItem(LinkedList &itemsList, std::vector<Coin>& coinVector){
                         std::cout << "Now available: "<< currentStock.on_hand << std::endl;
                     }
                     quit = true;
-                }//TODO: YOU SHOULD BREAK ONCE IT IS FOUND, USE findItemByID()
+                }
             }
             if (!itemSelected) {
                 std::cout << "Please select a valid ID" << std::endl;
