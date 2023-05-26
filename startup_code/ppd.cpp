@@ -14,6 +14,8 @@
 // #define YELLOW "\033[33m"
 
 bool colourEnhancement = false;
+bool betterInvalidInput = false;
+bool reverseList = false;
 std::string colourGreen;
 std::string colourRed;
 std::string colourYellow;
@@ -70,7 +72,7 @@ void addItem(LinkedList &itemsList);
 void removeItem(LinkedList &itemsList);
 
 //Enable/Disable enhancements:
-void enableEnhancements();
+void enableEnhancements(LinkedList &itemsList);
 
 // Load the stock data from the given file.
 // Returns true if the stock data was loaded successfully, otherwise false.
@@ -257,6 +259,12 @@ while (true)
     if (input != "10" && (input.size() != 1 || input[0] < '1' || input[0] > '9'))  // check if input is invalid
     {
         std::cout << "Invalid option. Please try again." << std::endl << std::endl;
+        if (betterInvalidInput)
+        {
+            std::cout << "Hint: Type the number corresponding to the option you would like to choose" << std::endl;
+            std::cout << "   For example, if you want to purchase an item, type \"2\"" << std::endl;
+        }
+        
         continue;  // go back to beginning of loop to display menu message and prompt user again
     }
 
@@ -312,7 +320,7 @@ while (true)
     }else if (choice == 10)
     {
         std::cout << "You entered 10" << std::endl;
-        enableEnhancements();
+        enableEnhancements(itemsList);
     }
 
 
@@ -500,63 +508,6 @@ int main(int argc, char **argv)
     return EXIT_SUCCESS;
 }
 
-// std::string &str_trim(std::string &str)
-// {
-//     // remove trailing whitespace
-//     while (str.size() && isspace(str.back()))
-//     {
-//         str.pop_back();
-//     }
-
-//     // remove leading whitespace
-//     size_t i = 0;
-//     while (i < str.size() && isspace(str[i]))
-//     {
-//         ++i;
-//     }
-//     str = str.substr(i);
-
-//     return str;
-// }
-
-// bool is_valid_number(const std::string &str)
-// {
-//     for (char c : str)
-//     {
-//         if (!std::isdigit(c))
-//         {
-//             return false;
-//         }
-//     }
-//     return true;
-// }
-
-// std::vector<std::string> tokenize(const std::string &str, const std::string &delims)
-// {
-//     std::vector<std::string> tokens;
-//     std::string token;
-//     for (char c : str)
-//     {
-//         if (delims.find(c) != std::string::npos)
-//         {
-//             if (token.size())
-//             { // found a token
-//                 tokens.push_back(token);
-//                 token.clear();
-//             }
-//         }
-//         else
-//         {
-//             token.push_back(c);
-//         }
-//     }
-//     if (token.size())
-//     { // the very last token
-//         tokens.push_back(token);
-//     }
-//     return tokens;
-// }
-
 void purchaseItem(LinkedList &itemsList, std::vector<Coin>& coinVector){
     std::string user_input;
     bool itemSelected=false;
@@ -599,6 +550,12 @@ void purchaseItem(LinkedList &itemsList, std::vector<Coin>& coinVector){
             }
             if (!itemSelected) {
                 std::cout << "Please select a valid ID" << std::endl;
+                if (betterInvalidInput)
+                {
+                std::cout << "Hint: If you are unsure of the ID of the item you would like to purchase" << std::endl;
+                std::cout << "then press [Enter] to return to Main menu. Then press [1] to view the items"  << std::endl;
+                std::cout << "along with their IDs. Their ID's are in the left most column." << std::endl;
+                }
             }
         }
         
@@ -640,7 +597,14 @@ bool payForItem(int price, std::vector<Coin>& coinVector){
                     amountPaid = std::stoi(amountPaidString);
                     validInt = true;
                 } else {
-                    std::cout << colourRed << "\""<< amountPaidString << "\"" << RESET << "is not a valid denomination. Please enter a number: " << RESET;// << std::endl; 
+                    std::cout << colourRed << "\""<< amountPaidString << "\"" << RESET << "is not a valid denomination. Please enter a number: " << RESET;
+                    if (betterInvalidInput)
+                    {
+                        std::cout << "Hint: You are not entering a number. You must enter a number, and the number must be a valid" << std::endl;
+                        std::cout << "denomination. Valid denominations of money are: 5, 10, 20, 50, 100, 200, " << std::endl;
+                        std::cout << "500, and 1000. Each denomination is its value in cents. SO $10 is 1000. " << std::endl;
+                    }
+                     
                     validInt = false;
                 }
             }
@@ -661,6 +625,14 @@ bool payForItem(int price, std::vector<Coin>& coinVector){
             if (!validAmount)
             {
                 std::cout << colourRed << centsToDollars(amountPaid) << RESET << " is not a valid denomination of money. Please try again." << std::endl;
+                if (betterInvalidInput)
+                {
+                    std::cout << "Hint: You are entering a number but it is not valid." << std::endl;
+                    std::cout << "Try entering the value of your money in cents. Make sure it is a valid denomination " << std::endl;
+                    std::cout << "For example, if you want to pay $2, enter 200 " << std::endl;
+                    std::cout << "Valid denominations are: 5, 10, 20, 50, 100, 200, 500, and 1000 " << std::endl;
+                }
+                
             }
         }
     } while (toBePaid > 0 && eofSelected == false);
@@ -813,6 +785,13 @@ void removeItem(LinkedList &itemsList)
         else
         { // item not found
             std::cout << "Error: invalid item id, please try again." << std::endl;
+            if (betterInvalidInput)
+            {
+                std::cout << "Hint: You must enter the correct ID for the item. "  << std::endl;
+                std::cout << "If you are unsure of the item ID, please return to the main menu "  << std::endl;
+                std::cout << "and view the items. You will find the ID of each item in the right most column "  << std::endl;
+            }
+            
         }
     }
 }
@@ -834,13 +813,13 @@ LinkedList::Iterator findItemByID(LinkedList &itemsList, const std::string &item
 }
 
 
-void enableEnhancements(){
-    
+void enableEnhancements(LinkedList &itemsList){
+    //std::cout << std::endl << "Enable or disable your enhancements here " << std::endl;
     std::string userInput;
     do{
         //Get Input and check if is correct
-        std::cout << std::endl << "Which enhancement would you like to Enable/Disable: " << std::endl;
-        std::cout << std::endl << "\t 1. Colour: ";
+        std::cout << "Which enhancement would you like to Enable/Disable: " << std::endl;
+        std::cout << "\t 1. Colour: ";
         if (colourEnhancement)
         {
             std::cout << "Enabled" << std::endl;
@@ -851,7 +830,15 @@ void enableEnhancements(){
         }
         
         
-        std::cout << "\t 2. Coming soon... " << std::endl;
+        std::cout << "\t 2. Better Invalid Input ";
+        if (betterInvalidInput)
+        {
+            std::cout << "Enabled" << std::endl;
+        }
+        else if (!betterInvalidInput)
+        {
+            std::cout << "Disabled" << std::endl;
+        }
         std::cout << "\t 3. Return to menu " << std::endl;
         std::getline(std::cin, userInput);
         std::cout << std::endl;
@@ -865,7 +852,8 @@ void enableEnhancements(){
                 colourEnhancement = !colourEnhancement;
             }
             else if (userInput == "2"){
-                std::cout << "You entecolourRed   2." << std::endl;
+                std::cout << "You entered   2." << std::endl;
+                betterInvalidInput =  !betterInvalidInput;
             }
             else if (userInput == "3"){
                 std::cout << "Returning to Main Menu." << std::endl;
@@ -883,11 +871,10 @@ void enableEnhancements(){
         colourYellow = "\033[33m";
     }else if (!colourEnhancement)
     {
-        colourGreen = "\033[0m";
-        colourRed = "\033[0m";
-        colourYellow = "\033[0m";
+        colourGreen = "";
+        colourRed = "";
+        colourYellow = "";
     }
-    
 
 
 }
