@@ -1,0 +1,69 @@
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Display Items
+ID   | Name                         | Available| Price
+-----|------------------------------|----------|------
+I0002|Apple Pie                     |20        |$3.00
+I0003|Lemon Cheesecake              |10        |$4.00
+I0004|Lemon Meringue Pie            |20        |$3.00
+I0005|Lemon Tart                    |12        |$3.75
+I0001|Meat Pie                      |50        |$3.50
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Remove Item
+Enter the item id of the item to remove from the menu: "I0002 - Apple Pie - Delicious Stewed Apple in a Yummy Pastry envelope" has been removed from the system.
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Display Items
+ID   | Name                         | Available| Price
+-----|------------------------------|----------|------
+I0003|Lemon Cheesecake              |10        |$4.00
+I0004|Lemon Meringue Pie            |20        |$3.00
+I0005|Lemon Tart                    |12        |$3.75
+I0001|Meat Pie                      |50        |$3.50
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Save and Exit

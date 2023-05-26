@@ -1,0 +1,115 @@
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): You entered 10
+Which enhancement would you like to Enable/Disable: 
+	 1. Colour: Disabled
+	 2. Better Invalid Input Disabled
+	 3. Return to menu 
+
+You entered   1.
+Which enhancement would you like to Enable/Disable: 
+	 1. Colour: Enabled
+	 2. Better Invalid Input Disabled
+	 3. Return to menu 
+
+Returning to Main Menu.
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Purchase Items
+Purchase Item
+-------------
+Please enter the ID of the item you wish to purchase: You have selected "Apple Pie - Delicious Stewed Apple in a Yummy Pastry envelope" This will cost you $3.00
+Price: $3.00
+You still need to give us: [32m$3.00: [0m[31m$0.01[0m is not a valid denomination of money. Please try again.
+You still need to give us: [32m$3.00: [0m Change due... Please collect your change shortly...
+** * Amount due to customer: $2.00 * ** 
+Please collect your change: [33m$2.00 [0m
+One less Apple Pie available now.
+Apple Pie - previously available: 20
+Now available: 19
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): You entered 10
+Which enhancement would you like to Enable/Disable: 
+	 1. Colour: Enabled
+	 2. Better Invalid Input Disabled
+	 3. Return to menu 
+
+You entered   1.
+Which enhancement would you like to Enable/Disable: 
+	 1. Colour: Disabled
+	 2. Better Invalid Input Disabled
+	 3. Return to menu 
+
+Returning to Main Menu.
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Purchase Items
+Purchase Item
+-------------
+Please enter the ID of the item you wish to purchase: You have selected "Apple Pie - Delicious Stewed Apple in a Yummy Pastry envelope" This will cost you $3.00
+Price: $3.00
+You still need to give us: $3.00: [0m$0.01[0m is not a valid denomination of money. Please try again.
+You still need to give us: $3.00: [0m Change due... Please collect your change shortly...
+** * Amount due to customer: $2.00 * ** 
+Please collect your change: $2.00 [0m
+One less Apple Pie available now.
+Apple Pie - previously available: 19
+Now available: 18
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Save and Exit

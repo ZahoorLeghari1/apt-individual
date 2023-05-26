@@ -1,0 +1,80 @@
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Purchase Items
+Purchase Item
+-------------
+Please enter the ID of the item you wish to purchase: Please select a valid ID
+Purchase Item
+-------------
+Please enter the ID of the item you wish to purchase: 
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): You entered 10
+Which enhancement would you like to Enable/Disable: 
+	 1. Colour: Disabled
+	 2. Better Invalid Input Disabled
+	 3. Return to menu 
+
+You entered   2.
+Which enhancement would you like to Enable/Disable: 
+	 1. Colour: Disabled
+	 2. Better Invalid Input Enabled
+	 3. Return to menu 
+
+Returning to Main Menu.
+
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Purchase Items
+Purchase Item
+-------------
+Please enter the ID of the item you wish to purchase: Please select a valid ID
+Hint: If you are unsure of the ID of the item you would like to purchase
+then press [Enter] to return to Main menu. Then press [1] to view the items
+along with their IDs. Their ID's are in the left most column.
+Purchase Item
+-------------
+Please enter the ID of the item you wish to purchase: 
+Main Menu:
+	1.Display Items
+	2.Purchase Items
+	3.Save and Exit
+Administrator-Only Menu:
+	4.Add Item
+	5.Remove Item
+	6.Display Coins
+	7.Reset Stock
+	8.Reset Coins
+	9.Abort Program
+	10.Enable Enhancements
+Select your option (1-10): Abort Program
